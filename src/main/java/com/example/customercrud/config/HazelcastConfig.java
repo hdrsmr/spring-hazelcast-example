@@ -30,6 +30,7 @@ public class HazelcastConfig {
 
         config.getNetworkConfig()
                 .addAddress(addressList);
+        config.getNetworkConfig().setSmartRouting(false);
 
         return HazelcastClient.newHazelcastClient(config);
     }
